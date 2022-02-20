@@ -84,6 +84,21 @@ public class CacheConfiguration {
             createCache(cm, com.poulailler.intelligent.domain.User.class.getName(), jcacheConfiguration);
             createCache(cm, com.poulailler.intelligent.domain.Authority.class.getName(), jcacheConfiguration);
             createCache(cm, com.poulailler.intelligent.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            createCache(cm, com.poulailler.intelligent.domain.Directeur.class.getName(), jcacheConfiguration);
+            createCache(cm, com.poulailler.intelligent.domain.Employe.class.getName(), jcacheConfiguration);
+            createCache(cm, com.poulailler.intelligent.domain.Variable.class.getName(), jcacheConfiguration);
+            createCache(cm, com.poulailler.intelligent.domain.Temperature.class.getName(), jcacheConfiguration);
+            createCache(cm, com.poulailler.intelligent.domain.Humidite.class.getName(), jcacheConfiguration);
+            //createCache(cm, com.poulailler.intelligent.domain.Co2.class.getName(), jcacheConfiguration);
+            createCache(cm, com.poulailler.intelligent.domain.Oeuf.class.getName(), jcacheConfiguration);
+            createCache(cm, com.poulailler.intelligent.domain.NH3.class.getName(), jcacheConfiguration);
+            createCache(cm, com.poulailler.intelligent.domain.Equipement.class.getName(), jcacheConfiguration);
+            createCache(cm, com.poulailler.intelligent.domain.Equipement.class.getName() + ".directeurs", jcacheConfiguration);
+            createCache(cm, com.poulailler.intelligent.domain.Equipement.class.getName() + ".employes", jcacheConfiguration);
+            createCache(cm, com.poulailler.intelligent.domain.Equipement.class.getName() + ".gestionnaires", jcacheConfiguration);
+            createCache(cm, com.poulailler.intelligent.domain.Lampe.class.getName(), jcacheConfiguration);
+            createCache(cm, com.poulailler.intelligent.domain.Serrure.class.getName(), jcacheConfiguration);
+            createCache(cm, com.poulailler.intelligent.domain.Ventilateur.class.getName(), jcacheConfiguration);
             // jhipster-needle-redis-add-entry
         };
     }

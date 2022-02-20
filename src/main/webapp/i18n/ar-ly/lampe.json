@@ -1,0 +1,25 @@
+{
+  "serverApp": {
+    "lampe": {
+      "home": {
+        "title": "Lampes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Lampe",
+        "createOrEditLabel": "Create or edit a Lampe",
+        "notFound": "No Lampes found"
+      },
+      "created": "A new Lampe is created with identifier {{ param }}",
+      "updated": "A Lampe is updated with identifier {{ param }}",
+      "deleted": "A Lampe is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Lampe {{ id }}?"
+      },
+      "detail": {
+        "title": "Lampe"
+      },
+      "id": "ID",
+      "libelle": "Libelle",
+      "equipement": "Equipement"
+    }
+  }
+}

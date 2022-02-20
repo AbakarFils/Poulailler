@@ -1,0 +1,25 @@
+{
+  "serverApp": {
+    "humidite": {
+      "home": {
+        "title": "Humidites",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Humidite",
+        "createOrEditLabel": "Créer ou éditer un Humidite",
+        "notFound": "Aucun Humidite trouvé"
+      },
+      "created": "Un nouveau Humidite a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Humidite avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Humidite avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Humidite {{ id }} ?"
+      },
+      "detail": {
+        "title": "Humidite"
+      },
+      "id": "ID",
+      "niveau": "Niveau",
+      "variable": "Variable"
+    }
+  }
+}

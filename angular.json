@@ -108,6 +108,7 @@
   },
   "defaultProject": "server",
   "cli": {
+    "analytics": "0dd287d4-515f-4a9c-b8d8-e92b6c0379c9",
     "cache": {
       "enabled": true,
       "path": "./target/",

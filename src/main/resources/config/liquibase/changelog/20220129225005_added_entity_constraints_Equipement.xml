@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity Equipement.
+    -->
+    <changeSet id="20220129225005-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="equipement_id"
+                                 baseTableName="rel_equipement__employe"
+                                 constraintName="fk_rel_equipement__employe__equipement_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="equipement"/>
+
+        <addForeignKeyConstraint baseColumnNames="employe_id"
+                                 baseTableName="rel_equipement__employe"
+                                 constraintName="fk_rel_equipement__employe__employe_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="employe"/>
+
+        <addForeignKeyConstraint baseColumnNames="equipement_id"
+                                 baseTableName="rel_equipement__gestionnaire"
+                                 constraintName="fk_rel_equipement__gestionnaire__equipement_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="equipement"/>
+
+        <addForeignKeyConstraint baseColumnNames="gestionnaire_id"
+                                 baseTableName="rel_equipement__gestionnaire"
+                                 constraintName="fk_rel_equipement__gestionnaire__gestionnaire_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="directeur"/>
+    </changeSet>
+</databaseChangeLog>

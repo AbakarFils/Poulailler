@@ -1,78 +1,139 @@
+<h1 class="display-4"><span>Bienvenue sur le,</span> BO Poulailler Intelligence</h1>
 <div class="row">
-  <div class="col-md-3">
-    <span class="hipster img-fluid rounded"></span>
+  <div class="col-md-2">
+    <span class="hipster img-fluid rounded vh-100"></span>
   </div>
 
-  <div class="col-md-9">
-    <h1 class="display-4"><span jhiTranslate="home.title">Welcome, Java Hipster!</span> (Server)</h1>
-
-    <p class="lead" jhiTranslate="home.subtitle">This is your homepage</p>
+  <div class="col-md-7">
+    <!--jhiTranslate="home.title"-->
 
     <div [ngSwitch]="account !== null">
       <div class="alert alert-success" *ngSwitchCase="true">
         <span id="home-logged-message" *ngIf="account" jhiTranslate="home.logged.message" [translateValues]="{ username: account.login }"
           >You are logged in as user "{{ account.login }}".</span
         >
+        <button (click)="camView = !camView" class="btn btn-info btn-sm mb-2">Toggle Cam Detection</button>
+        <main *ngIf="!camView">
+          <h2 class="text-center">Image Object Detection</h2>
+          <div class="text-center" *ngIf="loading"><small>Module Is loading...</small></div>
+          <hr />
+          <br />
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+            </div>
+            <div class="custom-file">
+              <input
+                type="file"
+                class="custom-file-input"
+                id="inputGroupFile01"
+                aria-describedby="inputGroupFileAddon01"
+                (change)="fileChangeEvent($event)"
+              />
+              <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+            </div>
+          </div>
+
+          <img [src]="imageSrc" #img *ngIf="imageSrc" class="image-responsive rounded" height="300px" />
+
+          <table class="mt-3 table table-sm table-bordered table-striped" *ngIf="predictions">
+            <thead>
+              <tr>
+                <th>Prediction Name</th>
+                <th>Prediction Probability</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let prediction of predictions">
+                <td>{{ prediction.className }}</td>
+                <td>{{ prediction.probability }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </main>
+        <main *ngIf="camView">
+          <jhi-video-detection></jhi-video-detection>
+        </main>
       </div>
 
-      <div class="alert alert-warning" *ngSwitchCase="false">
-        <span jhiTranslate="global.messages.info.authenticated.prefix">If you want to </span>
-        <a class="alert-link" (click)="login()" jhiTranslate="global.messages.info.authenticated.link">sign in</a
-        ><span jhiTranslate="global.messages.info.authenticated.suffix"
-          >, you can try the default accounts:<br />- Administrator (login="admin" and password="admin") <br />- User (login="user" and
-          password="user").</span
-        >
-      </div>
+      <!--<div class="alert alert-warning" *ngSwitchCase="false">
+        &lt;!&ndash; <span jhiTranslate="global.messages.info.authenticated.prefix">If you want to </span>
+         <a class="alert-link" (click)="login()" jhiTranslate="global.messages.info.authenticated.link">sign in</a
+         ><span jhiTranslate="global.messages.info.authenticated.suffix"
+           >, you can try the default accounts:<br />- Administrator (login="admin" and password="admin") <br />- User (login="user" and
+           password="user").</span
+         >&ndash;&gt;
+        <div>
+          <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8 col-sm-10">
+              <h1 jhiTranslate="login.title" data-cy="loginTitle">Sign in</h1>
+              <div class="alert alert-danger" *ngIf="authenticationError"
+                   jhiTranslate="login.messages.error.authentication" data-cy="loginError">
+                <strong>Failed to sign in!</strong> Please check your credentials and try again.
+              </div>
+              <form class="form" role="form" (ngSubmit)="connexion()" [formGroup]="loginForm">
+                <div class="form-group">
+                  <label class="username-label" for="username" jhiTranslate="global.form.username.label">Login</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="username"
+                    id="username"
+                    placeholder="{{ 'global.form.username.placeholder' | translate }}"
+                    formControlName="username"
+                    #username
+                    data-cy="username"
+                  />
+                </div>
 
-      <div class="alert alert-warning" *ngSwitchCase="false">
+                <div class="form-group">
+                  <label for="password" jhiTranslate="login.form.password">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    name="password"
+                    id="password"
+                    placeholder="{{ 'login.form.password.placeholder' | translate }}"
+                    formControlName="password"
+                    data-cy="password"
+                  />
+                </div>
+
+                <div class="form-check">
+                  <label class="form-check-label" for="rememberMe">
+                    <input class="form-check-input" type="checkbox" name="rememberMe" id="rememberMe"
+                           formControlName="rememberMe"/>
+                    <span jhiTranslate="login.form.rememberme">Remember me</span>
+                  </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary" jhiTranslate="login.form.button" data-cy="submit">Sign
+                  in
+                </button>
+              </form>
+              <div class="mt-3 alert alert-warning">
+                <a class="alert-link" routerLink="/account/reset/request" jhiTranslate="login.password.forgot"
+                   data-cy="forgetYourPasswordSelector"
+                >Did you forget your password?</a
+                >
+              </div>
+
+              <div class="alert alert-warning">
+                <span jhiTranslate="global.messages.info.register.noaccount">You don't have an account yet?</span>
+                <a class="alert-link" routerLink="/account/register" jhiTranslate="global.messages.info.register.link">Register
+                  a new account</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>-->
+
+      <!-- <div class="alert alert-warning" *ngSwitchCase="false">
         <span jhiTranslate="global.messages.info.register.noaccount">You don't have an account yet?</span>&nbsp;
-        <a class="alert-link" routerLink="account/register" jhiTranslate="global.messages.info.register.link">Register a new account</a>
-      </div>
+        <a class="alert-link" routerLink="account/register" jhiTranslate="global.messages.info.register.link">Register a
+          new account</a>
+      </div>-->
     </div>
-
-    <p jhiTranslate="home.question">If you have any question on JHipster:</p>
-
-    <ul>
-      <li>
-        <a href="https://www.jhipster.tech/" target="_blank" rel="noopener noreferrer" jhiTranslate="home.link.homepage"
-          >JHipster homepage</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://stackoverflow.com/tags/jhipster/info"
-          target="_blank"
-          rel="noopener noreferrer"
-          jhiTranslate="home.link.stackoverflow"
-          >JHipster on Stack Overflow</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/jhipster/generator-jhipster/issues?state=open"
-          target="_blank"
-          rel="noopener noreferrer"
-          jhiTranslate="home.link.bugtracker"
-          >JHipster bug tracker</a
-        >
-      </li>
-      <li>
-        <a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer" jhiTranslate="home.link.chat"
-          >JHipster public chat room</a
-        >
-      </li>
-      <li>
-        <a href="https://twitter.com/jhipster" target="_blank" rel="noopener noreferrer" jhiTranslate="home.link.follow"
-          >follow @jhipster on Twitter</a
-        >
-      </li>
-    </ul>
-
-    <p>
-      <span jhiTranslate="home.like">If you like JHipster, don't forget to give us a star on</span>
-      <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer" jhiTranslate="home.github"
-        >GitHub</a
-      >!
-    </p>
   </div>
 </div>

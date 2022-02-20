@@ -1,0 +1,38 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="nH3">
+      <h2 data-cy="nH3DetailsHeading"><span jhiTranslate="serverApp.nH3.detail.title">NH 3</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ nH3.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="serverApp.nH3.volume">Volume</span></dt>
+        <dd>
+          <span>{{ nH3.volume }}</span>
+        </dd>
+        <dt><span jhiTranslate="serverApp.nH3.variable">Variable</span></dt>
+        <dd>
+          <div *ngIf="nH3.variable">
+            <a [routerLink]="['/variable', nH3.variable?.id, 'view']">{{ nH3.variable?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/nh-3', nH3.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

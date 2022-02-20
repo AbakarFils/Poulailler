@@ -15,7 +15,29 @@
     <property name="datetimeType" value="datetime" dbms="oracle, mssql, postgresql, h2"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220129171823_added_entity_Directeur.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220129180145_added_entity_Employe.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220129182007_added_entity_Variable.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220129222659_added_entity_Temperature.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220129223101_added_entity_Humidite.xml" relativeToChangelogFile="false"/>
+     <include file="config/liquibase/changelog/20220129223626_added_entity_Oeuf.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220129223857_added_entity_NH3.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220129225005_added_entity_Equipement.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220129230013_added_entity_Lampe.xml" relativeToChangelogFile="false"/>
+     <include file="config/liquibase/changelog/20220129230530_added_entity_Serrure.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220130104421_added_entity_Ventilateur.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220130104635_added_entity_Co2.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20220129171823_added_entity_constraints_Directeur.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220129180145_added_entity_constraints_Employe.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220129182007_added_entity_constraints_Variable.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220129222659_added_entity_constraints_Temperature.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220129223101_added_entity_constraints_Humidite.xml" relativeToChangelogFile="false"/>
+     <include file="config/liquibase/changelog/20220129223626_added_entity_constraints_Oeuf.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220129223857_added_entity_constraints_NH3.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220129225005_added_entity_constraints_Equipement.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220129230013_added_entity_constraints_Lampe.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220129230530_added_entity_constraints_Serrure.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

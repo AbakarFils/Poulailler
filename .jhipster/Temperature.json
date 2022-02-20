@@ -1,0 +1,27 @@
+{
+  "fields": [
+    {
+      "fieldName": "dregree",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipName": "variable",
+      "otherEntityName": "variable",
+      "relationshipType": "one-to-one",
+      "relationshipValidateRules": ["required"],
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "id": true,
+      "otherEntityRelationshipName": "temperature"
+    }
+  ],
+  "service": "serviceClass",
+  "dto": "mapstruct",
+  "jpaMetamodelFiltering": true,
+  "readOnly": false,
+  "pagination": "pagination",
+  "name": "Temperature",
+  "changelogDate": "20220129222659"
+}

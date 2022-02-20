@@ -40,6 +40,21 @@
     "devServerPort": 4200,
     "clientPackageManager": "npm",
     "languages": ["fr", "ar-ly", "en"],
-    "enableGradleEnterprise": false
+    "enableGradleEnterprise": false,
+    "lastLiquibaseTimestamp": 1643539595000,
+    "entities": [
+      "Directeur",
+      "Employe",
+      "Variable",
+      "Temperature",
+      "Humidite",
+      "Oeuf",
+      "NH3",
+      "Equipement",
+      "Lampe",
+      "Serrure",
+      "Ventilateur",
+      "Co2"
+    ]
   }
 }

@@ -1,0 +1,25 @@
+{
+  "serverApp": {
+    "lampe": {
+      "home": {
+        "title": "Lampes",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer une nouvelle Lampe",
+        "createOrEditLabel": "Créer ou éditer une Lampe",
+        "notFound": "Aucun Lampe trouvé"
+      },
+      "created": "Une nouvelle Lampe a été créé avec l'identifiant {{ param }}",
+      "updated": "La Lampe avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "La Lampe avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Lampe {{ id }} ?"
+      },
+      "detail": {
+        "title": "Lampe"
+      },
+      "id": "ID",
+      "libelle": "Libelle",
+      "equipement": "Equipement"
+    }
+  }
+}

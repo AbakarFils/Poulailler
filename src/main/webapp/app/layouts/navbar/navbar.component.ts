@@ -47,6 +47,7 @@ export class NavbarComponent implements OnInit {
 
     this.accountService.getAuthenticationState().subscribe(account => {
       this.account = account;
+      //  console.log('account', account);
     });
   }
 

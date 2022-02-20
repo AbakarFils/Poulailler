@@ -1,0 +1,66 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="equipement">
+      <h2 data-cy="equipementDetailsHeading"><span jhiTranslate="serverApp.equipement.detail.title">Equipement</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ equipement.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="serverApp.equipement.statut">Statut</span></dt>
+        <dd>
+          <span>{{ equipement.statut }}</span>
+        </dd>
+        <dt><span jhiTranslate="serverApp.equipement.refArduino">Ref Arduino</span></dt>
+        <dd>
+          <span>{{ equipement.refArduino }}</span>
+        </dd>
+        <dt><span jhiTranslate="serverApp.equipement.dateCrea">Date Crea</span></dt>
+        <dd>
+          <span>{{ equipement.dateCrea | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="serverApp.equipement.libelle">Libelle</span></dt>
+        <dd>
+          <span>{{ equipement.libelle }}</span>
+        </dd>
+        <dt><span jhiTranslate="serverApp.equipement.marque">Marque</span></dt>
+        <dd>
+          <span>{{ equipement.marque }}</span>
+        </dd>
+        <dt><span jhiTranslate="serverApp.equipement.type">Type</span></dt>
+        <dd>
+          <span jhiTranslate="{{ 'serverApp.TypeEquipement.' + equipement.type }}">{{ equipement.type }}</span>
+        </dd>
+        <dt><span jhiTranslate="serverApp.equipement.employe">Employe</span></dt>
+        <dd>
+          <span *ngFor="let employe of equipement.employes; let last = last">
+            <a [routerLink]="['/employe', employe?.id, 'view']">{{ employe.id }}</a
+            >{{ last ? '' : ', ' }}
+          </span>
+        </dd>
+        <dt><span jhiTranslate="serverApp.equipement.gestionnaire">Gestionnaire</span></dt>
+        <dd>
+          <span *ngFor="let gestionnaire of equipement.gestionnaires; let last = last">
+            <a [routerLink]="['/directeur', gestionnaire?.id, 'view']">{{ gestionnaire.id }}</a
+            >{{ last ? '' : ', ' }}
+          </span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/equipement', equipement.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

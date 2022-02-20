@@ -1,0 +1,19 @@
+{
+  "serverApp": {
+    "variable": {
+      "home": {
+        "title": "Variables",
+        "refreshListLabel": "Refresh list",
+        "notFound": "No Variables found"
+      },
+      "detail": {
+        "title": "Variable"
+      },
+      "id": "ID",
+      "plageMax": "Plage Max",
+      "dateCreation": "Date Creation",
+      "lue": "Lue",
+      "consulter": "Consulter"
+    }
+  }
+}

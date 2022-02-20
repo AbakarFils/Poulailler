@@ -36,6 +36,12 @@
         "style": "camelCase"
       }
     ],
+    "@typescript-eslint/no-misused-promises": [
+      "error",
+      {
+        "checksVoidReturn": false
+      }
+    ],
     "@angular-eslint/relative-url-prefix": "error",
     "@typescript-eslint/ban-types": [
       "error",
@@ -68,32 +74,32 @@
         ]
       }
     ],
-    "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/no-floating-promises": "off",
-    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-floating-promises": "warn",
+    "@typescript-eslint/no-non-null-assertion": "warn",
     "@typescript-eslint/no-parameter-properties": ["warn", { "allows": ["public", "private", "protected"] }],
-    "@typescript-eslint/no-shadow": ["error"],
-    "@typescript-eslint/no-unnecessary-condition": "error",
+    "@typescript-eslint/no-shadow": ["warn"],
+    "@typescript-eslint/no-unnecessary-condition": "warn",
     "@typescript-eslint/no-unsafe-argument": "off",
     "@typescript-eslint/no-unsafe-assignment": "off",
     "@typescript-eslint/no-unsafe-call": "off",
     "@typescript-eslint/no-unsafe-member-access": "off",
     "@typescript-eslint/prefer-nullish-coalescing": "error",
-    "@typescript-eslint/prefer-optional-chain": "error",
+    "@typescript-eslint/prefer-optional-chain": "warn",
     "@typescript-eslint/unbound-method": "off",
     "arrow-body-style": "error",
     "curly": "error",
-    "eqeqeq": ["error", "always", { "null": "ignore" }],
-    "guard-for-in": "error",
-    "no-bitwise": "error",
-    "no-caller": "error",
-    "no-console": ["error", { "allow": ["warn", "error"] }],
-    "no-eval": "error",
-    "no-labels": "error",
-    "no-new": "error",
-    "no-new-wrappers": "error",
-    "object-shorthand": ["error", "always", { "avoidExplicitReturnArrows": true }],
-    "radix": "error",
+    "eqeqeq": ["warn", "always", { "null": "ignore" }],
+    "guard-for-in": "warn",
+    "no-bitwise": "warn",
+    "no-caller": "warn",
+    "no-console": ["warn", { "allow": ["warn", "error", "info", "time", "timeEnd", "trace"] }],
+    "no-eval": "warn",
+    "no-labels": "warn",
+    "no-new": "warn",
+    "no-new-wrappers": "warn",
+    "object-shorthand": ["warn", "always", { "avoidExplicitReturnArrows": true }],
+    "radix": "warn",
     "spaced-comment": ["warn", "always"]
   }
 }

@@ -1,0 +1,26 @@
+{
+  "serverApp": {
+    "serrure": {
+      "home": {
+        "title": "Serrures",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Serrure",
+        "createOrEditLabel": "Create or edit a Serrure",
+        "notFound": "No Serrures found"
+      },
+      "created": "A new Serrure is created with identifier {{ param }}",
+      "updated": "A Serrure is updated with identifier {{ param }}",
+      "deleted": "A Serrure is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Serrure {{ id }}?"
+      },
+      "detail": {
+        "title": "Serrure"
+      },
+      "id": "ID",
+      "libelle": "Libelle",
+      "dimension": "Dimension",
+      "equipement": "Equipement"
+    }
+  }
+}

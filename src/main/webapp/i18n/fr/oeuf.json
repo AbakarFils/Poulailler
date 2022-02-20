@@ -1,0 +1,25 @@
+{
+  "serverApp": {
+    "oeuf": {
+      "home": {
+        "title": "Oeufs",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Oeuf",
+        "createOrEditLabel": "Créer ou éditer un Oeuf",
+        "notFound": "Aucun Oeuf trouvé"
+      },
+      "created": "Un nouveau Oeuf a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Oeuf avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Oeuf avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Oeuf {{ id }} ?"
+      },
+      "detail": {
+        "title": "Oeuf"
+      },
+      "id": "ID",
+      "nombreJournalier": "Nombre Journalier",
+      "variable": "Variable"
+    }
+  }
+}

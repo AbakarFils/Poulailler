@@ -1,0 +1,25 @@
+{
+  "serverApp": {
+    "co2": {
+      "home": {
+        "title": "Co2s",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Co 2",
+        "createOrEditLabel": "Créer ou éditer un Co 2",
+        "notFound": "Aucun Co 2 trouvé"
+      },
+      "created": "Un nouveau Co 2 a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Co 2 avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Co 2 avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Co 2 {{ id }} ?"
+      },
+      "detail": {
+        "title": "Co 2"
+      },
+      "id": "ID",
+      "volume": "Volume",
+      "variable": "Variable"
+    }
+  }
+}

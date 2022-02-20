@@ -1,0 +1,38 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="co2">
+      <h2 data-cy="co2DetailsHeading"><span jhiTranslate="serverApp.co2.detail.title">Co 2</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ co2.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="serverApp.co2.volume">Volume</span></dt>
+        <dd>
+          <span>{{ co2.volume }}</span>
+        </dd>
+        <dt><span jhiTranslate="serverApp.co2.variable">Variable</span></dt>
+        <dd>
+          <div *ngIf="co2.variable">
+            <a [routerLink]="['/variable', co2.variable?.id, 'view']">{{ co2.variable?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/co-2', co2.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

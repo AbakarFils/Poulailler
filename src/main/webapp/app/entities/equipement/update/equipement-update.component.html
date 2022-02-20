@@ -1,0 +1,135 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-equipement-heading" data-cy="EquipementCreateUpdateHeading" jhiTranslate="serverApp.equipement.home.createOrEditLabel">
+        Create or edit a Equipement
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="form-group" [hidden]="editForm.get('id')!.value == null">
+          <label class="form-control-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="serverApp.equipement.statut" for="field_statut">Statut</label>
+          <input type="checkbox" class="form-check" name="statut" id="field_statut" data-cy="statut" formControlName="statut" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="serverApp.equipement.refArduino" for="field_refArduino">Ref Arduino</label>
+          <input
+            type="text"
+            class="form-control"
+            name="refArduino"
+            id="field_refArduino"
+            data-cy="refArduino"
+            formControlName="refArduino"
+          />
+          <div *ngIf="editForm.get('refArduino')!.invalid && (editForm.get('refArduino')!.dirty || editForm.get('refArduino')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('refArduino')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="serverApp.equipement.dateCrea" for="field_dateCrea">Date Crea</label>
+          <div class="d-flex">
+            <input
+              id="field_dateCrea"
+              data-cy="dateCrea"
+              type="datetime-local"
+              class="form-control"
+              name="dateCrea"
+              formControlName="dateCrea"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="serverApp.equipement.libelle" for="field_libelle">Libelle</label>
+          <input type="text" class="form-control" name="libelle" id="field_libelle" data-cy="libelle" formControlName="libelle" />
+          <div *ngIf="editForm.get('libelle')!.invalid && (editForm.get('libelle')!.dirty || editForm.get('libelle')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('libelle')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="serverApp.equipement.marque" for="field_marque">Marque</label>
+          <input type="text" class="form-control" name="marque" id="field_marque" data-cy="marque" formControlName="marque" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="serverApp.equipement.type" for="field_type">Type</label>
+          <select class="form-control" name="type" formControlName="type" id="field_type" data-cy="type">
+            <option [ngValue]="null">{{ 'serverApp.TypeEquipement.null' | translate }}</option>
+            <option *ngFor="let typeEquipement of typeEquipementValues" [value]="typeEquipement">
+              {{ 'serverApp.TypeEquipement.' + typeEquipement | translate }}
+            </option>
+          </select>
+        </div>
+
+        <!--       <div class="form-group">
+          <label jhiTranslate="serverApp.equipement.employe" for="field_employes">Employe</label>
+          <select class="form-control" id="field_employes" data-cy="employe" multiple name="employes" formControlName="employes">
+            <option
+              [ngValue]="getSelectedEmploye(employeOption, editForm.get('employes')!.value)"
+              *ngFor="let employeOption of employesSharedCollection; trackBy: trackEmployeById"
+            >
+              {{ employeOption.id }}
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label jhiTranslate="serverApp.equipement.gestionnaire" for="field_gestionnaires">Gestionnaire</label>
+          <select
+            class="form-control"
+            id="field_gestionnaires"
+            data-cy="gestionnaire"
+            multiple
+            name="gestionnaires"
+            formControlName="gestionnaires"
+          >
+            <option
+              [ngValue]="getSelectedDirecteur(directeurOption, editForm.get('gestionnaires')!.value)"
+              *ngFor="let directeurOption of directeursSharedCollection; trackBy: trackDirecteurById"
+            >
+              {{ directeurOption.id }}
+            </option>
+          </select>
+        </div>-->
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

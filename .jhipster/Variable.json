@@ -1,0 +1,31 @@
+{
+  "fields": [
+    {
+      "fieldName": "plageMax",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "dateCreation",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "lue",
+      "fieldType": "Boolean"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipName": "consulter",
+      "otherEntityName": "user",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "login",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "variable"
+    }
+  ],
+  "service": "no",
+  "readOnly": true,
+  "pagination": "pagination",
+  "name": "Variable",
+  "changelogDate": "20220129182007"
+}

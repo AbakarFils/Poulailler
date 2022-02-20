@@ -1,0 +1,25 @@
+{
+  "serverApp": {
+    "nH3": {
+      "home": {
+        "title": "NH 3 S",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new NH 3",
+        "createOrEditLabel": "Create or edit a NH 3",
+        "notFound": "No NH 3 S found"
+      },
+      "created": "A new NH 3 is created with identifier {{ param }}",
+      "updated": "A NH 3 is updated with identifier {{ param }}",
+      "deleted": "A NH 3 is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete NH 3 {{ id }}?"
+      },
+      "detail": {
+        "title": "NH 3"
+      },
+      "id": "ID",
+      "volume": "Volume",
+      "variable": "Variable"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="serrure">
+      <h2 data-cy="serrureDetailsHeading"><span jhiTranslate="serverApp.serrure.detail.title">Serrure</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ serrure.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="serverApp.serrure.libelle">Libelle</span></dt>
+        <dd>
+          <span>{{ serrure.libelle }}</span>
+        </dd>
+        <dt><span jhiTranslate="serverApp.serrure.dimension">Dimension</span></dt>
+        <dd>
+          <span>{{ serrure.dimension }}</span>
+        </dd>
+        <dt><span jhiTranslate="serverApp.serrure.equipement">Equipement</span></dt>
+        <dd>
+          <div *ngIf="serrure.equipement">
+            <a [routerLink]="['/equipement', serrure.equipement?.id, 'view']">{{ serrure.equipement?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/serrure', serrure.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

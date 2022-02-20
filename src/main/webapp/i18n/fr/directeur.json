@@ -1,0 +1,25 @@
+{
+  "serverApp": {
+    "directeur": {
+      "home": {
+        "title": "Directeurs",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Directeur",
+        "createOrEditLabel": "Créer ou éditer un Directeur",
+        "notFound": "Aucun Directeur trouvé"
+      },
+      "created": "Un nouveau Directeur a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Directeur avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Directeur avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Directeur {{ id }} ?"
+      },
+      "detail": {
+        "title": "Directeur"
+      },
+      "id": "ID",
+      "adresse": "Adresse",
+      "user": "User"
+    }
+  }
+}

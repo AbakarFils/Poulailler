@@ -7,6 +7,20 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "الكيانات",
+        "directeur": "Directeur",
+        "employe": "Employe",
+        "variable": "Variable",
+        "les_variable": "Les Variables",
+        "temperature": "Temperature",
+        "humidite": "Humidite",
+        "co2": "Co 2",
+        "oeuf": "Oeuf",
+        "nh3": "NH 3",
+        "equipement": "Equipement",
+        "les_equipement": "Les Equipements",
+        "lampe": "Lampe",
+        "ventilateur": "Ventilateur",
+        "serrure": "Serrure",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

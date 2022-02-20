@@ -1,0 +1,25 @@
+{
+  "serverApp": {
+    "humidite": {
+      "home": {
+        "title": "Humidites",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Humidite",
+        "createOrEditLabel": "Create or edit a Humidite",
+        "notFound": "No Humidites found"
+      },
+      "created": "A new Humidite is created with identifier {{ param }}",
+      "updated": "A Humidite is updated with identifier {{ param }}",
+      "deleted": "A Humidite is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Humidite {{ id }}?"
+      },
+      "detail": {
+        "title": "Humidite"
+      },
+      "id": "ID",
+      "niveau": "Niveau",
+      "variable": "Variable"
+    }
+  }
+}

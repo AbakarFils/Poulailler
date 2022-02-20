@@ -1,0 +1,25 @@
+{
+  "serverApp": {
+    "nH3": {
+      "home": {
+        "title": "NH3s",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau NH 3",
+        "createOrEditLabel": "Créer ou éditer un NH 3",
+        "notFound": "Aucun NH 3 trouvé"
+      },
+      "created": "Un nouveau NH 3 a été créé avec l'identifiant {{ param }}",
+      "updated": "Le NH 3 avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le NH 3 avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le NH 3 {{ id }} ?"
+      },
+      "detail": {
+        "title": "NH 3"
+      },
+      "id": "ID",
+      "volume": "Volume",
+      "variable": "Variable"
+    }
+  }
+}
