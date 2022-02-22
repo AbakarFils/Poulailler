@@ -1,0 +1,25 @@
+{
+  "serverApp": {
+    "ventilateur": {
+      "home": {
+        "title": "Ventilateurs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ventilateur",
+        "createOrEditLabel": "Create or edit a Ventilateur",
+        "notFound": "No Ventilateurs found"
+      },
+      "created": "A new Ventilateur is created with identifier {{ param }}",
+      "updated": "A Ventilateur is updated with identifier {{ param }}",
+      "deleted": "A Ventilateur is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ventilateur {{ id }}?"
+      },
+      "detail": {
+        "title": "Ventilateur"
+      },
+      "id": "ID",
+      "libelle": "Libelle",
+      "vitesse": "Vitesse"
+    }
+  }
+}

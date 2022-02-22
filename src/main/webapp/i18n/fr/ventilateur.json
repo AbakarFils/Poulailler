@@ -1,0 +1,25 @@
+{
+  "serverApp": {
+    "ventilateur": {
+      "home": {
+        "title": "Ventilateurs",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Ventilateur",
+        "createOrEditLabel": "Créer ou éditer un Ventilateur",
+        "notFound": "Aucun Ventilateur trouvé"
+      },
+      "created": "Un nouveau Ventilateur a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Ventilateur avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Ventilateur avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Ventilateur {{ id }} ?"
+      },
+      "detail": {
+        "title": "Ventilateur"
+      },
+      "id": "ID",
+      "libelle": "Libelle",
+      "vitesse": "Vitesse"
+    }
+  }
+}

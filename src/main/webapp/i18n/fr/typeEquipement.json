@@ -1,0 +1,10 @@
+{
+  "serverApp": {
+    "TypeEquipement": {
+      "null": "",
+      "CAPTEUR": "CAPTEUR",
+      "ACTUATEUR": "ACTUATEUR",
+      "SIMPLE": "SIMPLE"
+    }
+  }
+}
